@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "Courier New", Courier, monospace;
+  --color-neon-blue: #00F3FF;
+  --color-neon-green: #39FF14;
+  --color-neon-pink: #FF00FF;
+  --color-dark-bg: #050505;
+  --color-border-dark: #1a1a1a;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-dark-bg);
+    color: #ffffff;
+    font-family: var(--font-mono);
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer utilities {
+  .neon-blue {
+    color: var(--color-neon-blue);
+    text-shadow: 0 0 8px rgba(0, 243, 255, 0.6);
+  }
+  .neon-green {
+    color: var(--color-neon-green);
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.6);
+  }
+  .neon-pink {
+    color: var(--color-neon-pink);
+    text-shadow: 0 0 8px rgba(255, 0, 255, 0.6);
+  }
+  .grid-pattern {
+    background-image: linear-gradient(rgba(20, 20, 20, 1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(20, 20, 20, 1) 1px, transparent 1px);
+    background-size: 25px 25px;
+  }
+}
